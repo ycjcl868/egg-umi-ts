@@ -1,6 +1,4 @@
-# hackernews-async-ts
-
-[Hacker News](https://news.ycombinator.com/) showcase using typescript && egg
+# egg-umi-ts
 
 ## QuickStart
 
@@ -13,6 +11,11 @@ $ open http://localhost:7001/
 ```
 
 Don't tsc compile at development mode, if you had run `tsc` then you need to `npm run clean` before `npm run dev`.
+
+
+### Feature
+
+- [x] share utils
 
 ### Deploy
 
