@@ -7,13 +7,14 @@
 {% if description %}
   <meta name="description" content="{{description}}" />
 {% else %}
-  <meta name="description" content="{{settingInfo.description}}" />
+  <meta name="description" content="{{description}}" />
 {% endif %}
-<meta name="keywords" content="{{settingInfo.keywords}}" />
+<meta name="keywords" content="{{keywords}}" />
 
 {% if ctx.app.config.env !== 'local' -%}
   {{ helper.assets.getStyle('vendors.css') | safe }}
 {%- endif %}
+{{ helper.assets.getContext(__context__) | safe }}
 </head>
 <body>
 
