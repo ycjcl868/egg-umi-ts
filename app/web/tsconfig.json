@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "module": "esnext",
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "rootDir": "./",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "lib": [
+      "es6",
+      "dom",
+      "dom.iterable"
+    ]
+  },
+  "include": [
+    "./**/*",
+    "./__test__/**/*"
+  ],
+  "exclude": [
+    "*.jsx",
+    "*.js",
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts",
+    "tslint:latest",
+    "tslint-config-prettier"
+  ]
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
+<title>{{title}}</title>
+{% if description %}
+  <meta name="description" content="{{description}}" />
+{% else %}
+  <meta name="description" content="{{settingInfo.description}}" />
+{% endif %}
+<meta name="keywords" content="{{settingInfo.keywords}}" />
+
+{% if ctx.app.config.env !== 'local' -%}
+  {{ helper.assets.getStyle('vendors.css') | safe }}
+{%- endif %}
+</head>
+<body>
+
+<div id="root"></div>
+
+<script>
+  window.routerBase = '/';
+  window.resourceBaseUrl = '{{ helper.assets.resourceBase }}';
+</script>
+{{ helper.assets.getScript('umi.js') | safe }}
+</body>
+</html>
